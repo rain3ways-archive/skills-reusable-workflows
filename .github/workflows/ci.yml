@@ -6,7 +6,7 @@ on:
     - main
 
 permissions:
-  contesnt: read
+  contents: read
 
 jobs:
   quality:
