@@ -1,0 +1,15 @@
+name: CI
+
+on: 
+ pull_request:
+  branches:
+    - main
+
+permissions:
+  contesnt: read
+
+jobs:
+  quality:
+    uses: ./.github/workflows/reusable-node-quality.yml
+    with:
+      node-version: 24
