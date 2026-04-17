@@ -19,11 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ inputs.node-version }}
           cache: npm
       - run: npm ci
       - run: npm run lint
+
   tests:
     name: Tests with coverage
     runs-on: ubuntu-latest
